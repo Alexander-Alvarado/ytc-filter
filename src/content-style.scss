@@ -103,7 +103,9 @@ html[dark] #ytc-filter,
 
   #ytc-messages {
     background-color: white;
-    overflow: hidden;
+    overflow-y: scroll;
+    box-sizing: content-box;
+    width: 100%;
   }
   .w-100 {
     width: 100%;
