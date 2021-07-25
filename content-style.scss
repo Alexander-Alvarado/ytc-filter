@@ -1,0 +1,414 @@
+$dark-bg: #181818;
+$light-bg: #fff;
+$grey-color: #7e7e7e;
+$primary: rgb(50, 146, 255);
+$rounding: 0.5rem;
+
+$moderator-color: #5e84f1;
+#chat #ytc-filter {
+  .sm-btn {
+    padding: 0.1rem 0.3rem;
+  }
+
+  button {
+    padding: 0.3rem 0.7rem;
+  }
+
+  .vc-container {
+    font-size: 0.7rem;
+    padding: 0.8rem;
+  }
+
+  .vc-title {
+    font-size: 0.9rem;
+  }
+
+  .vc-notification {
+    font-size: 0.65rem;
+  }
+
+  .vc-content {
+    padding: 0.6rem;
+    //max-height: 25rem;
+    overflow-y: scroll;
+  }
+
+  .vc-message-item {
+    .vc-timestamp {
+      font-size: 0.7rem;
+    }
+  }
+}
+
+html[dark] #ytc-filter,
+.dark-mode #ytc-filter {
+  .vc-toolbar {
+    background-color: $dark-bg;
+  }
+  button {
+    background-color: $dark-bg;
+    &:hover,
+    &:active {
+      background-color: lighten($dark-bg, 10%);
+    }
+  }
+
+  .vc-container {
+    color: $light-bg;
+    background-color: $dark-bg;
+  }
+  .vc-notification {
+    color: $light-bg;
+    background-color: lighten($dark-bg, 10%);
+  }
+  #ytc-messages {
+    background-color: #151515;
+  }
+
+  .vc-message-item {
+    &:hover {
+      background-color: lighten($dark-bg, 10%);
+    }
+    .vc-author-verified {
+      background-color: #888;
+      svg {
+        fill: white;
+      }
+    }
+  }
+}
+
+#ytc-filter {
+
+  .stats {
+    width: 100%;
+    text-align: right;
+    margin-right: 1rem;
+    font-size: 0.9rem;
+  }
+  #clear-btn {
+    padding: 5px;
+    top: -3px;
+    position: relative;
+  }
+
+  hr.resize {
+    margin-top:2px;
+    margin-left: 40%;
+    width: 20%;
+    border-top: 3px solid $grey-color;
+    height: 3px;
+    cursor: n-resize;
+  }
+
+  #ytc-messages {
+    background-color: white;
+  }
+  .w-100 {
+    width: 100%;
+  }
+
+  a:active,
+  a:visited {
+    color: $primary;
+  }
+  a:hover {
+    color: darken($primary, 10%);
+  }
+
+  .svg-icon {
+    fill: $primary;
+  }
+
+  .sm-btn {
+    padding: 0.2rem 0.5rem;
+  }
+
+  .active {
+    color: $light-bg;
+    background-color: $primary;
+    .svg-icon {
+      fill: $light-bg;
+    }
+    &:hover {
+      background-color: darken($primary, 10%);
+    }
+  }
+
+  .hidden {
+    visibility: hidden;
+  }
+
+  button {
+    cursor: pointer;
+    background-color: $light-bg;
+    color: $primary;
+    border-radius: $rounding;
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    border: 2px solid $primary;
+    outline: none;
+    &:hover,
+    &:active {
+      background-color: darken($light-bg, 10%);
+    }
+  }
+  input,
+  select {
+    border-radius: $rounding;
+    outline: none;
+  }
+  .vc-container {
+    height: 100%;
+    color: $dark-bg;
+    background-color: $light-bg;
+    font-size: 1.3rem;
+    padding: 1rem;
+  }
+
+  .toolbar {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+  }
+
+  .vc-toolbar {
+    display: flex;
+    background-color: $light-bg;
+    justify-content: space-between;
+  }
+
+  .ytc-msg-toolbar {
+    display: inline-flex;
+    background-color: $light-bg;
+    justify-content: space-between;
+  }
+
+  .vc-valign {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    button {
+      margin-right: 0.2rem;
+    }
+  }
+
+  .vc-title {
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .vc-options {
+    margin-bottom: 1rem;
+  }
+  .vc-options-item {
+    padding: 0.5rem;
+  }
+
+  .vc-content {
+    padding: 1rem;
+    //max-height: 25rem;
+    overflow-y: scroll;
+  }
+
+  .vc-purchase-amount {
+    border-radius: $rounding;
+    padding: 0.3rem;
+  }
+
+  .vc-filter-list {
+    max-height: 10rem;
+    overflow-y: scroll;
+    list-style-type: none;
+    .vc-filter-item {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  .pointer {
+    cursor: pointer;
+  }
+  .vc-message-item {
+
+    &:hover {
+      background-color: darken($light-bg, 10%);
+    }
+
+    .yt-menu-append {
+      display: inline-block;
+      line-height: 0px;
+      
+      padding: 0;
+      width:18px;
+      position: relative;
+      yt-icon-button {
+        display: inline;
+        top:-5px;
+        padding: 0;
+        height: 15px;
+        width: 15px;
+      }
+      paper-ripple {
+        display: none;
+      }
+      button {
+        border: none;
+        fill: $grey-color;
+        padding: 0;
+        margin: 0;
+        width: 15px;
+        overflow: hidden;
+      }
+
+      button.yt-icon-button > yt-icon {
+        width: 15px;
+        height: 15px;
+      }
+    }
+    //margin-top: 0.5rem;
+    .vc-timestamp {
+      font-size: 1rem;
+      color: $grey-color;
+      cursor: pointer;
+    }
+    .vc-author {
+      margin-left: 0.6rem;
+      color: $grey-color;
+
+      .author-icon {
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      &.author {
+        color: $moderator-color;
+        .author-icon {
+          fill: $moderator-color;
+        }
+      }
+      &.owner {
+        color: #111111;
+        background-color: #ffd600;
+        border-radius: $rounding;
+      }
+    }
+
+    .vc-author-verified {
+      border-radius: $rounding;
+      display: inline;
+      background-color: #c9c9c9;
+      height: 18px;
+      svg {
+        fill: #353535;
+      }
+    }
+
+    .vc-message {
+      word-break: break-word;
+      hyphens: auto;
+      margin-left: .3rem;
+      img {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+
+  .vc-notification {
+    position: absolute;
+    padding: 1rem 1rem;
+    background: darken($light-bg, 10%);
+    color: $dark-bg;
+    top: 4rem;
+    left: 50%;
+    width: 24rem;
+    margin-left: -12rem;
+    border-radius: 1rem;
+    border: 2px solid $primary;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2000;
+    font-size: 1.25rem;
+    max-height: 35rem;
+
+    .notification-content {
+      padding: 0.5rem;
+      overflow-y: auto;
+      max-height: 33rem;
+      p {
+        margin-bottom: 0.5rem;
+      }
+      ul {
+        list-style: disc;
+        margin-left: 1rem;
+      }
+      h2 {
+        margin-top: 1rem;
+      }
+    }
+    .close {
+      height: 3rem;
+    }
+  }
+
+  .vc-resize {
+    text-align: center;
+    width: 100%;
+
+    height: 3px;
+  }
+
+  .flex-align-center {
+    display: flex;
+    align-items: center;
+  }
+
+  .flex-align-base {
+    display: flex;
+    align-items: baseline;
+  }
+  .justify-end {
+    justify-content: flex-end;
+  }
+  .vc-text-center {
+    text-align: center;
+  }
+
+  .resizer {
+    border: 1px solid #353535;
+  }
+}
+
+.ytc-loading {
+  color: black;
+  background-color: white;
+  font-size: 1.5rem;
+}
+
+#remount-ytc {
+  color: $primary;
+  cursor: pointer;
+  &:hover {
+    color: darken($color: $primary, $amount: 20%);
+  }
+}
+
+.ytc-popout {
+  yt-live-chat-app {
+    max-width: 30rem;
+  }
+}
+
+.ytc-pointer {
+  cursor: pointer;
+}
+
+.ytc-hidden {
+  display: none;
+}
+
+.ytc-support-link {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
