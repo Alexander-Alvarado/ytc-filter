@@ -1,9 +1,9 @@
 <template>
   <div>
     <div class="container-fluid">
-      <div class="row mt-3">
+      <div class="row">
         <div id="ytc-filter" class="col message-column" :class="{ 'limited-width': displaySettings }">
-          <h5 class="message-column-title">{{ displayedVideoName }}</h5>
+          <h5 class="message-column-title" hidden>{{ displayedVideoName }}</h5>
           <message-list :video-id="displayedVideoId" :is-popout="true">
             <button class="btn btn-primary  sm-btn mr-2" @click="$store.commit('toggleDarkMode')">{{ darkMode ? 'Dark' : 'Light' }}</button>
             <b-button :pressed.sync="displaySettings" variant="primary" class="sm-btn"> {{ displaySettings ? 'Hide' : 'Show' }} settings</b-button>
