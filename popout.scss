@@ -1,0 +1,91 @@
+$b-toast-background-opacity: 1;
+@import '~bootstrap/scss/bootstrap.scss';
+@import '~bootstrap-vue/src/index.scss';
+
+$dark-bg: #181818;
+
+#ytc-messages {
+  height: 100vh;
+}
+
+.message-column {
+  &.limited-width {
+    max-width: 25rem;
+  }
+  display: flex;
+  flex-direction: column;
+  .message-column-title {
+    max-height: 3rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+.settings-column {
+  height: calc(100vh - 1rem);
+  overflow-y: auto;
+}
+#message-list {
+  //max-width: 30rem;
+
+  .toolbar {
+    margin-bottom: 0.5rem;
+  }
+  .vc-content {
+    padding: 0rem 1rem 1rem 1rem;
+    //max-height: 25rem;
+    overflow-y: scroll;
+    height: calc(100vh - 8rem);
+  }
+}
+
+.dark-mode {
+  background-color: $gray-900;
+  color: $white;
+
+  #ytc-filter button {
+    background-color: $dark-bg;
+    &:hover,
+    &:active {
+      background-color: lighten($dark-bg, 10%);
+    }
+  }
+
+  .toast {
+    .toast-header,
+    .toast-body {
+      color: $body-color;
+    }
+  }
+
+  .nav-tabs .nav-link {
+    color: $white;
+    &.active {
+      background-color: $gray-800;
+    }
+  }
+
+  .card,
+  .modal-content {
+    background-color: $gray-800;
+  }
+
+  #ytc-filter #ytc-messages {
+    background-color: $gray-900;
+  }
+
+  .vc-message-item {
+    .vc-author-verified {
+      background-color: #888;
+      svg {
+        fill: white;
+      }
+    }
+  }
+}
+
+.alert-dismissible .close{
+  padding: 0.6rem;
+  line-height: 1rem;
+}
