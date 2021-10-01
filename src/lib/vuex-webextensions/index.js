@@ -52,7 +52,7 @@ export default function(opt) {
       if (isBackground) {
         return new BackgroundScript(str, browser, options);
       }
-
+//return the script
       return new ContentScript(str, browser, options);
     });
   };
