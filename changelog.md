@@ -1,7 +1,7 @@
 ## 2.2.0
 Bug fixes:
 - Word-break change
-
+cool stuff dude
 ## 2.1.6
 
 Bug fixes:
