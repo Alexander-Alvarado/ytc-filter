@@ -7,3 +7,4 @@ Note that there is a number of limitation due to Youtube:
 * If the message hasn't appeared yet, the button will not be present
 * In order for Youtube to work properly, ytcFilter must remove those buttons from itself if they are too old
 * Due to Youtube's poor performance, the button may be missing in ytcFIlter
+* Refresh if broken.
