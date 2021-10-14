@@ -1,3 +1,7 @@
+## 2.2.1
+Bug fixes:
+- Semi now true
+
 ## 2.2.0
 Bug fixes:
 - Word-break change
