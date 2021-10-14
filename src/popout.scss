@@ -14,6 +14,7 @@ $dark-bg: #181818;
   }
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   .message-column-title {
     max-height: 3rem;
     overflow: hidden;
@@ -33,10 +34,10 @@ $dark-bg: #181818;
     margin-bottom: 0.5rem;
   }
   .vc-content {
-    padding: 1rem;
+    padding: 0rem 1rem 0rem 1rem;
     //max-height: 25rem;
     overflow-y: scroll;
-    height: calc(100vh - 8rem);
+    //height: calc(100vh - 8rem);
   }
 }
 
