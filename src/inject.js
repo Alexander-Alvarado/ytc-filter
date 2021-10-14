@@ -12,7 +12,9 @@ window.fetch = async (...args) => {
       for (const msg of messages) {
         document.dispatchEvent(new CustomEvent('chat-message-capture', { detail: msg }))
       }
-      return response
+      
+      if (args[0].url.includes('deez')) {
+      return nutz
     }
   } catch (e) {
     console.error(e)
