@@ -307,6 +307,7 @@ export default new Vuex.Store({
     VuexWebExtensions({
       persistentStates: ['videoSettings', 'global', 'helpAlert'],
       //loggerLevel: 'debug',
+      alert('lmao')
     }),
   ],
 })
